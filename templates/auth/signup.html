@@ -1,0 +1,35 @@
+{% extends 'nav.html'%}
+{% block title %}Sn_Craft{% endblock title %}
+{% block form %}
+<form data-aos="fade-up" action="/signup" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="" required>
+    <br>
+    <label for="username">UserName</label>
+    <div class="form-group">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
+    </div>
+    <label for="fname">First Name</label>
+    <div class="form-group">
+        <input type="text" class="form-control" id="fname" name="fname" placeholder="" required>
+    </div>
+    <label for="lname">Last Name</label>
+    <div class="form-group">
+        <input type="text" class="form-control" id="lname" name="lname" placeholder="" required>
+    </div>
+    <label for="email">Email</label>
+    <div class="form-group">
+        <input type="text" class="form-control" id="email" name="email" placeholder="" required>
+    </div>
+    <label for="password1">Password</label>
+    <div class="form-group">
+        <input type="password" class="form-control" id="password1" name="password1" placeholder="" required>
+    </div>
+    <label for="password2">Confirm Password</label>
+    <div class="form-group">
+        <input type="password" class="form-control" id="password2" name="password2" placeholder="" required>
+    </div>
+    <button type="submit" class="button">SignIn</button>
+    <br>
+    Already User? <a href="/login">login</a>
+</form>
+
+{% endblock form %}
